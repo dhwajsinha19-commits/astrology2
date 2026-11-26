@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jyotish — Your Vedic Cosmos</title>
+<meta name="description" content="Spin the 3D wheels of your birth date and watch your Vedic chart explode into view: Moon sign, nakshatra, planets, numbers and a pairing oracle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="phase-pick">
+
+<canvas id="stars" aria-hidden="true"></canvas>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div id="flash" aria-hidden="true"></div>
+
+<!-- ============ 1 · THE 3D DATE PICKER ============ -->
+<section id="picker" aria-label="Choose your birth date">
+  <div id="pickerView" class="view3d" role="application" aria-label="Three rotating wheels: year, month, day"></div>
+  <header class="pick-head">
+    <div class="brand">ज्योतिष &nbsp;·&nbsp; JYOTISH</div>
+    <h1>When did your story begin?</h1>
+    <p>Turn the three wheels of time — <b>year</b>, <b>month</b>, <b>day</b>.<br class="br-desk"> Drag, scroll, tap a row, or use the arrow keys.</p>
+  </header>
+  <footer class="pick-foot">
+    <div id="pickLabel" class="pick-label" aria-live="polite"></div>
+    <button id="revealBtn" class="btn-primary" type="button"><span>Reveal my cosmos</span><i aria-hidden="true">✦</i></button>
+    <p class="tiny">Sidereal zodiac · Lahiri ayanamsa · calculated for noon IST</p>
+  </footer>
+</section>
+
+<!-- ============ 2 · RESULTS (built by app.js) ============ -->
+<nav id="topnav" aria-label="Sections">
+  <a class="logo" href="#overview">ज्योतिष</a>
+  <div class="links">
+    <a href="#moon">Moon sign</a><a href="#sun">Zodiac</a><a href="#numbers">Numbers</a><a href="#planets">Planets</a><a href="#sky">Sky</a><a href="#panchang">Panchang</a><a href="#pairing">Pairing</a>
+  </div>
+  <button id="againBtn" type="button">↺ New date</button>
+</nav>
+<main id="results" hidden></main>
+
+<script src="js/three.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/astro.js"></script>
+<script src="js/stage.js"></script>
+<script src="js/stars.js"></script>
+<script src="js/picker.js"></script>
+<script src="js/creatures.js"></script>
+<script src="js/planets.js"></script>
+<script src="js/pairing.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
